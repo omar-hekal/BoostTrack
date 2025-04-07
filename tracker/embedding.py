@@ -200,7 +200,8 @@ class EmbeddingComputer:
             path = "external/weights/dance_sbs_S50.pth"
         else:
             # raise RuntimeError("Need the path for a new ReID model.")
-            return self._get_general_model()
+            path = self.reid_path
+            # return self._get_general_model()
 
         model = FastReID(path)
         model.eval()
